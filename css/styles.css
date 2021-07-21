@@ -1,0 +1,133 @@
+/**this is the aspect of our page
+
+p { 
+} 
+
+p is a selector
+
+p { color: 
+} 
+
+color is the property
+
+p { color: blue; 
+}
+
+blue is value
+
+Why CSS,  because the css take the last selector to
+apply the value
+
+**/
+
+/**all selectors that begin with ":" is pseudoselectors, this is an element that isnt inside 
+of html, root is a form to variables on css called custom properties **/
+
+/**in this case rote will be our color palet**/
+
+/**http://necolas.github.io/normalize.css/ is a library that allow us create a standard
+around of project **/
+
+
+:root {
+    --blanco:#ffffff;
+    --oscuro:#000000; 
+    --primario:#ffc107;
+    --secundario:#0097A7;
+    --gris:#757575;
+
+    --main-font: 3.8rem; 
+    
+
+
+} 
+
+
+html {
+    font-size: 62.25%;
+}
+
+body {
+    font-size: 16px;
+}
+
+/** title will be a sigle div label, for ever when you are using
+a div class it will begin with a "." point, is soo good use div
+class because this element is reusable and the same properties
+will be apply over it **/
+
+.title {
+    text-align: center;
+    font-size: var(--main-font) ; /** 3.8rem 1 rem = 10px **/
+    width: 20rem;
+    font-family: 'Odibee Sans', cursive;
+    font-weight: bold;
+    
+    /**The values for normal 400 and 700 for bold **/
+
+    color: var(--primario);
+}
+
+/**the classes are reusable, in this case we going to apply this class over 
+the class "main-navigation" **/
+
+.container {
+    width: 120rem;
+    margin: 0 auto;
+   
+    /**other form to apply this values is with the next sintax 
+    
+    margin: 0 auto 0 auto ;
+    
+    other way is 
+
+    margin: 0 auto ;
+
+    **/
+}
+
+.nav-bg {
+    background-color: var(--secundario);
+}
+
+
+.main-navigation {
+    padding: 1rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+}
+
+.main-navigation a {
+    color: var(--blanco);
+    text-decoration: none;
+   
+
+}
+
+.tabogo p {
+    background-color: var(--primario);
+}
+
+/**font family is a property that allow us chose a specific font
+a good option to add a font is google font, with this tool you can
+show a single **/
+
+/** REM is relative to the text size standar **/
+
+/** In this case we can see the specifity fact, this aspect 
+of css define the properties over a element according to order 
+that has over ccs sheet, for this reason the name of cascade
+for CSS standard**/
+span {
+    font-size: 2rem;
+    color: green;
+}
+
+.title span {
+    font-size: 2rem;
+    color: blue;
+}
+
+  
